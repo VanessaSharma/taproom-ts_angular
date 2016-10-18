@@ -1,0 +1,26 @@
+{
+  "name": "taproom",
+  "description": "angular,typescript",
+  "main": "index.html",
+  "authors": [
+    "Halle & Vanessa"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "practice",
+    "angular",
+    "typescript"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
