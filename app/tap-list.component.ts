@@ -9,7 +9,9 @@ import { Tap } from './tap.model';
     <h4>{{currentTap.brand }}</h4>
     <h4>$ {{ currentTap.price }}</h4>
     <h4>{{ currentTap.alcoholPercentage }}%</h4>
+    <h5>{{ currentTap.pints }} pints left</h5>
   <button (click)="editButtonHasBeenClicked(currentTap)">Edit</button>
+  <button (click)="buyPintButtonHasBeenClicked(currentTap)">Buy Pint</button>
   </div>
   `
 })
@@ -19,5 +21,8 @@ export class TapListComponent {
   @Output() clickSender = new EventEmitter();
   editButtonHasBeenClicked(tapToEdit: Tap) {
     this.clickSender.emit(tapToEdit);
+  }
+  buyPintButtonHasBeenClicked(tapToBuy: Tap) {
+    tapToBuy.pints = (( tapToBuy.pints-1 ));
   }
 }
