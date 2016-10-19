@@ -4,9 +4,9 @@ import { Tap } from './tap.model';
 @Component({
   selector: 'tap-list',
   template: `
-  <div *ngFor="let currentTap of childTapLists">
+  <div *ngFor="let currentTap of childTapList">
     <h3>{{ currentTap.name }}</h3>
-  <button (click)="showDetails(currentTap)">Edit</button>
+  <button (click)="editButtonHasBeenClicked(currentTap)">Edit</button>
   </div>
   `
 })

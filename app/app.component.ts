@@ -6,10 +6,14 @@ import { Tap } from './tap.model';
   template: `
   <div class="container">
     <h1>Halle's Tap Room</h1>
-    <tap-list [childTapList]="masterTapList"
-      (clickSender)="showDetails($event)"></tap-list>
-      <edit-tap [childSelectedTap]="selectedTap"
-      (doneClickedSender)="finishedEditing()"></edit-tap>
+    <tap-list
+      [childTapList]="masterTapList"
+      (clickSender)="showDetails($event)"
+      ></tap-list>
+      <edit-tap
+      [childSelectedTap]="selectedTap"
+      (doneClickedSender)="finishedEditing()"
+      ></edit-tap>
     </div>
   `
 })
