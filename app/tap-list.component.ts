@@ -6,6 +6,9 @@ import { Tap } from './tap.model';
   template: `
   <div *ngFor="let currentTap of childTapList">
     <h3>{{ currentTap.name }}</h3>
+    <h4>{{currentTap.brand }}</h4>
+    <h4>$ {{ currentTap.price }}</h4>
+    <h4>{{ currentTap.alcoholPercentage }}%</h4>
   <button (click)="editButtonHasBeenClicked(currentTap)">Edit</button>
   </div>
   `
