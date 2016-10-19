@@ -10,7 +10,7 @@ export class VolumePipe implements PipeTransform {
     var output: Tap[] = [];
     if(desiredVolume === "available") {
       for (var i = 0; i < input.length; i++) {
-        if (input[i]).pints > 0) {
+        if (input[i].pints > 0) {
           output.push(input[i]);
         }
       }
