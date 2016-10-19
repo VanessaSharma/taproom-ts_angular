@@ -4,6 +4,7 @@ import { FormsModule }   from '@angular/forms';
 import { AppComponent }   from './app.component';
 import { TapListComponent } from './tap-list.component';
 import { EditTapComponent } from './edit-tap.component';
+import { NewTapComponent } from './new-tap.component';
 
 @NgModule({
   imports: [
@@ -14,6 +15,7 @@ import { EditTapComponent } from './edit-tap.component';
     AppComponent,
     TapListComponent,
     EditTapComponent,
+    NewTapComponent
    ],
   bootstrap:    [ AppComponent ]
 })

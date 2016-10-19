@@ -14,6 +14,9 @@ import { Tap } from './tap.model';
       [childSelectedTap]="selectedTap"
       (doneClickedSender)="finishedEditing()"
       ></edit-tap>
+      <new-tap
+        (newTapSender)="addTap($event)"
+        ></new-tap>
     </div>
   `
 })
@@ -30,5 +33,8 @@ export class AppComponent {
   }
   finishedEditing() {
     this.selectedTap = null;
+  }
+  addTap(newTapFromChild: Tap) {
+    this.masterTapList.push(newTapFromChild);
   }
 }
