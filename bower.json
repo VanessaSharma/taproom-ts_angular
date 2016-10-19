@@ -11,7 +11,7 @@
     "angular",
     "typescript"
   ],
-  "homepage": "",
+  "homepage": "https://github.com/VanessaSharma/taproom-ts_angular",
   "private": true,
   "ignore": [
     "**/.*",
