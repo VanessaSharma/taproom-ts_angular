@@ -4,7 +4,11 @@ import { Tap } from './tap.model';
 @Component({
   selector: 'tap-list',
   template: `
-  <div *ngFor="let currentTap of childTapList">
+  <select (change)="onChange($event.target.value)">
+      <option value="available" selected="selected">Show All Taps Avalable</option>
+      <option value="low">Show Tap less than 10 pints</option>
+    </select>
+  <div *ngFor="let currentTap of childTapList | volume:selectedVolume">
     <h3>{{ currentTap.name }}</h3>
     <h4>{{currentTap.brand }}</h4>
     <h4>$ {{ currentTap.price }}</h4>
@@ -19,6 +23,11 @@ import { Tap } from './tap.model';
 export class TapListComponent {
   @Input() childTapList: Tap[];
   @Output() clickSender = new EventEmitter();
+  public selectedVolume: string = "available"
+  onChange(optionFromMenu) {
+    this.selectedVolume = optionFromMenu;
+    console.log(this.selectedVolume);
+  }
   editButtonHasBeenClicked(tapToEdit: Tap) {
     this.clickSender.emit(tapToEdit);
   }

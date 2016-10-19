@@ -5,6 +5,7 @@ import { AppComponent }   from './app.component';
 import { TapListComponent } from './tap-list.component';
 import { EditTapComponent } from './edit-tap.component';
 import { NewTapComponent } from './new-tap.component';
+import { VolumePipe } from './volume.pipe';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { NewTapComponent } from './new-tap.component';
     AppComponent,
     TapListComponent,
     EditTapComponent,
-    NewTapComponent
+    NewTapComponent,
+    VolumePipe,
    ],
   bootstrap:    [ AppComponent ]
 })
