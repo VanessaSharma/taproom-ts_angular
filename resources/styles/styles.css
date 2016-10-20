@@ -1,0 +1,15 @@
+.lowPrice {
+  color: green;
+}
+
+.highPrice {
+  color: red;
+}
+
+.lowPercentage {
+  color: pink;
+}
+
+.highPercentage {
+  color: Purple;
+}

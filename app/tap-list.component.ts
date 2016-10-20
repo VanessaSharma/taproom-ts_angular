@@ -11,8 +11,10 @@ import { Tap } from './tap.model';
   <div *ngFor="let currentTap of childTapList | volume:selectedVolume">
     <h3>{{ currentTap.name }}</h3>
     <h4>{{currentTap.brand }}</h4>
-    <h4>$ {{ currentTap.price }}</h4>
-    <h4>{{ currentTap.alcoholPercentage }}%</h4>
+    <h4 *ngIf="currentTap.price<5" class="lowPrice">$ {{ currentTap.price }}</h4>
+    <h4 *ngIf="currentTap.price>5" removeClass="lowPrice" class="highPrice">$ {{ currentTap.price }}</h4>
+    <h4 *ngIf="currentTap.alcoholPercentage<5" class="lowPercentage">{{ currentTap.alcoholPercentage }}%</h4>
+    <h4 *ngIf="currentTap.alcoholPercentage>5" class="highPercentage">{{ currentTap.alcoholPercentage }}%</h4>
     <h5>{{ currentTap.pints }} pints left</h5>
   <button (click)="editButtonHasBeenClicked(currentTap)">Edit</button>
   <button (click)="buyPintButtonHasBeenClicked(currentTap)">Buy Pint</button>
